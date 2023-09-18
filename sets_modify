@@ -1,0 +1,21 @@
+#include <iostream>
+#include <set>
+
+using namespace std;
+
+int main() {
+  // Create a set of integers.
+  set<int> my_set;
+
+  // Insert elements into the set.
+  my_set.insert(10);
+  my_set.insert(20);
+  my_set.insert(30);
+  my_set.insert(40);
+  my_set.insert(40);
+  my_set.insert(50);
+  for(int i: my_set)
+  {
+  	cout<<i<<" ";
+  }
+}
