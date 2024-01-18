@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int bsr(int arr[],int low,int high,int key)
+{
+	if(low>high)return -1;
+	int mid=low+(high-low)/2;
+	if(arr[mid]<key){
+		return bsr(arr,mid+1,high,key);
+	}
+	else if(arr[mid]>key)
+	{
+		return(arr,mid-1,high,key);
+	}
+	else if(arr[mid]==key){
+        return mid;		
+	}
+	else{
+		return -1;
+	}
+}
+int main()
+{
+	int n;
+	cin>>n;
+	int arr[n];
+	for(int i=0;i<n;i++)
+	{
+		cin>>arr[i];
+	}
+	int k;
+	cin>>k;
+	cout<<bsr(arr,0,n-1,k);
+}
